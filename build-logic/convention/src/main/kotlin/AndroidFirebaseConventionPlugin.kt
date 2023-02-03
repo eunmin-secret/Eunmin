@@ -4,21 +4,15 @@ import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 
-class AndroidHiltConventionPlugin : Plugin<Project> {
+class AndroidFirebaseConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            with(pluginManager) {
-                apply("dagger.hilt.android.plugin")
-                apply("org.jetbrains.kotlin.kapt")
-            }
-
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
-            dependencies {
-                "implementation"(libs.findLibrary("hilt").get())
-                "kapt"(libs.findLibrary("hilt.compiler").get())
-            }
 
+            dependencies {
+                val platform = platform(libs.findLibrary("firebase.bom").get())
+                "implementation"(platform)
+            }
         }
     }
-
 }

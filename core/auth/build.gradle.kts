@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "dev.project.eunmin.core.member"
+    namespace = "dev.project.eunmin.core.auth"
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

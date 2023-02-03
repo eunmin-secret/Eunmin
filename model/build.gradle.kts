@@ -1,11 +1,9 @@
 plugins {
     id("eunmin.android.library")
-    id("eunmin.android.firebase")
-    id("eunmin.android.hilt")
 }
 
 android {
-    namespace = "dev.project.eunmin.core.member"
+    namespace = "dev.project.eunmin.model"
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -21,10 +19,4 @@ android {
             )
         }
     }
-}
-
-dependencies {
-    implementation(project(":model"))
-    implementation(project(":core:common"))
-    implementation(libs.firebase.auth.ktx)
 }

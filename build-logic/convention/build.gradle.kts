@@ -36,5 +36,9 @@ gradlePlugin {
             id = "eunmin.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
         }
+        register("androidFirebase") {
+            id = "eunmin.android.firebase"
+            implementationClass = "AndroidFirebaseConventionPlugin"
+        }
     }
 }
