@@ -1,4 +1,5 @@
 plugins {
+    id("eunmin.android.library")
     id("eunmin.android.library.compose")
 }
 
