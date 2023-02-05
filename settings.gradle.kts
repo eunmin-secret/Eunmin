@@ -14,12 +14,10 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Eunmin"
-include(":design:system")
-include(":app:todo")
-include(":core:todo")
-include(":feature:todo")
-include(":core:member")
-include(":feature:member")
-include(":core:auth")
-include(":core:common")
-include(":model")
+
+include(":exercise:counter")
+
+include(":design:system-compose")
+include(":design:system-xml")
+
+include(":exercise:unit-conversion")

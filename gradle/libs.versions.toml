@@ -1,6 +1,9 @@
 [versions]
 android-gradle-plugin = "7.4.0"
 android-core = "1.9.0"
+android-appcompat = "1.6.0"
+android-material = "1.8.0"
+android-constraint-layout = "2.1.4"
 compose-kotlin-compiler = "1.4.0"
 compose-activity = "1.5.1"
 compose-lifecycle = "2.5.1"
@@ -14,6 +17,9 @@ hilt-extend = "1.0.0"
 [libraries]
 android-desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar-jdk-libs" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "android-core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "android-appcompat" }
+androidx-material = { group = "com.google.android.material", name = "material", version.ref = "android-material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "android-constraint-layout" }
 androidx-compose-activity = { group = "androidx.activity", name = "activity.compose", version.ref = "compose-activity" }
 androidx-compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "compose-lifecycle" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
@@ -23,6 +29,8 @@ androidx-compose-material-icons = { group = "androidx.compose.material", name = 
 androidx-compose-material-size = { group = "androidx.commpose.material3", name = "material3-window-size-class" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+androidx-compose-runtime-saveable = { group = "androidx.compose.runtime", name = "runtime-saveable" }
 debug-androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 debug-androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 test-androidx-compose-ui = { group = "androidx.compose.ui", name = "ui-test-junit4" }
