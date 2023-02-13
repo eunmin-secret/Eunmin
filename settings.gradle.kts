@@ -14,10 +14,17 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Eunmin"
-
-include(":exercise:counter")
-
+include(":design:system-basic")
 include(":design:system-compose")
-include(":design:system-xml")
 
-include(":exercise:unit-conversion")
+include(":design:keyboard-compose")
+include(":design:keyboard-basic")
+
+include(":core:calculator")
+
+include(":feature:calculator-compose")
+include(":feature:calculator-basic")
+
+include(":app:calculator-basic")
+include(":app:calculator-compose")
+

@@ -1,10 +1,9 @@
 plugins {
     id("eunmin.android.library")
-    id("eunmin.android.library.compose")
 }
 
 android {
-    namespace = "dev.project.eunmin.design.system.compose"
+    namespace = "dev.project.eunmin.design.keyboard.basic"
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -20,14 +19,13 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+    implementation(project(":design:system-basic"))
     implementation(libs.androidx.core.ktx)
-    api(libs.androidx.compose.foundation)
-    api(libs.androidx.compose.material)
-    implementation(libs.androidx.compose.material.icons)
-    api(libs.androidx.compose.ui)
-    api(libs.androidx.compose.ui.tooling.preview)
-    debugApi(libs.debug.androidx.compose.ui.tooling)
 }

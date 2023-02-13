@@ -1,10 +1,11 @@
 plugins {
     id("eunmin.android.library")
     id("eunmin.android.library.compose")
+    id("eunmin.android.hilt")
 }
 
 android {
-    namespace = "dev.project.eunmin.design.system.compose"
+    namespace = "dev.project.eunmin.feature.calculator.compose"
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -24,10 +25,12 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    api(libs.androidx.compose.foundation)
-    api(libs.androidx.compose.material)
-    implementation(libs.androidx.compose.material.icons)
-    api(libs.androidx.compose.ui)
-    api(libs.androidx.compose.ui.tooling.preview)
-    debugApi(libs.debug.androidx.compose.ui.tooling)
+    implementation(project(":design:system-compose"))
+    implementation(project(":design:keyboard-compose"))
+    implementation(project(":core:calculator"))
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.compose.viewmodel)
+    implementation(libs.androidx.compose.navigation)
+    implementation(libs.orbit.viewmodel)
+    implementation(libs.orbit.compose)
 }

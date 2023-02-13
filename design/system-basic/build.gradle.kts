@@ -1,10 +1,9 @@
 plugins {
     id("eunmin.android.library")
-    id("eunmin.android.library.compose")
 }
 
 android {
-    namespace = "dev.project.eunmin.design.system.compose"
+    namespace = "dev.project.eunmin.design.system.basic"
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -24,10 +23,7 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    api(libs.androidx.compose.foundation)
-    api(libs.androidx.compose.material)
-    implementation(libs.androidx.compose.material.icons)
-    api(libs.androidx.compose.ui)
-    api(libs.androidx.compose.ui.tooling.preview)
-    debugApi(libs.debug.androidx.compose.ui.tooling)
+    api(libs.androidx.appcompat)
+    api(libs.androidx.material)
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 }

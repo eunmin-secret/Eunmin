@@ -1,10 +1,10 @@
 plugins {
     id("eunmin.android.library")
-    id("eunmin.android.library.compose")
+    id("eunmin.android.hilt")
 }
 
 android {
-    namespace = "dev.project.eunmin.design.system.compose"
+    namespace = "dev.project.eunmin.feature.calculator.basic"
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -20,14 +20,17 @@ android {
             )
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    api(libs.androidx.compose.foundation)
-    api(libs.androidx.compose.material)
-    implementation(libs.androidx.compose.material.icons)
-    api(libs.androidx.compose.ui)
-    api(libs.androidx.compose.ui.tooling.preview)
-    debugApi(libs.debug.androidx.compose.ui.tooling)
+    implementation(project(":design:system-basic"))
+    implementation(project(":design:keyboard-basic"))
+    implementation(project(":core:calculator"))
+    implementation(libs.orbit.viewmodel)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
 }
